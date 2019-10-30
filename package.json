@@ -23,6 +23,10 @@
     "format:prettier": "pretty-quick --staged",
     "husky:precommit": "concurrently \"npm:format:*\" && yarn build && git add -A && CI=1 ava"
   },
+  "files": [
+    "cjs/",
+    "esm/"
+  ],
   "husky": {
     "hooks": {
       "pre-commit": "yarn run husky:precommit"
