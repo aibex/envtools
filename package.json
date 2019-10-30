@@ -21,7 +21,7 @@
     "release": "release-it",
     "____________________": "echo \"The following sub-commands are used to serve the main commands above\"",
     "format:prettier": "pretty-quick --staged",
-    "husky:precommit": "concurrently \"npm:format:*\" && yarn build && git add -A && ava"
+    "husky:precommit": "concurrently \"npm:format:*\" && yarn build && git add -A && CI=1 ava"
   },
   "husky": {
     "hooks": {
