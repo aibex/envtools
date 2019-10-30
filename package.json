@@ -4,6 +4,13 @@
   "description": "Simple Functions for a Sane Environment",
   "homepage": "https://github.com/aibexhq/envtools",
   "author": "Aibex <oss@aibex0corp.com>",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">= 10.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "env",
     "environment",
@@ -12,6 +19,10 @@
   ],
   "main": "./cjs/index.js",
   "module": "./esm/index.js",
+  "files": [
+    "cjs/",
+    "esm/"
+  ],
   "scripts": {
     "build": "rm -rf cjs/* && babel esm --out-dir cjs",
     "bt": "yarn build && yarn test",
@@ -23,19 +34,11 @@
     "format:prettier": "pretty-quick --staged",
     "husky:precommit": "concurrently \"npm:format:*\" && yarn build && git add -A && CI=1 ava"
   },
-  "files": [
-    "cjs/",
-    "esm/"
-  ],
   "husky": {
     "hooks": {
       "pre-commit": "yarn run husky:precommit"
     }
   },
-  "engines": {
-    "node": ">= 10.0.0"
-  },
-  "license": "Apache-2.0",
   "licenses": [
     {
       "type": "Apache-2.0",
