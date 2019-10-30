@@ -1,8 +1,12 @@
 import EnvToolsError from "../error";
 
 class RequiresEnvError extends EnvToolsError {
-  constructor(missing) {
-    super("One or more environment variables were not found in process.env");
+  constructor(missing = []) {
+    super(
+      `One or more environment variables were not found in process.env: ${missing.join(
+        ", "
+      )}`
+    );
     this.data = { env: missing };
   }
 }
