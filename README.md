@@ -1,5 +1,7 @@
 # envtools
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/aibexhq/envtools.svg)](https://greenkeeper.io/)
+
 Simple Functions for a Sane Environment
 
 **Add via Yarn**
