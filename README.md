@@ -1,6 +1,6 @@
 # envtools
 
-[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=aibexhq/envtools&identifier=138425562)](https://dependabot.com)
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=aibexhq/envtools)](https://dependabot.com)
 
 Simple Functions for a Sane Environment
 
