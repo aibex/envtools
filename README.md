@@ -1,6 +1,6 @@
 # envtools
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/aibexhq/envtools.svg)](https://greenkeeper.io/)
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=aibexhq/envtools&identifier=138425562)](https://dependabot.com)
 
 Simple Functions for a Sane Environment
 
