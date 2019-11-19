@@ -1,5 +1,6 @@
 # envtools
 
+[![CircleCI](https://circleci.com/gh/aibexhq/envtools/tree/master.svg?style=shield)](https://circleci.com/gh/aibexhq/envtools/tree/master)
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=aibexhq/envtools)](https://dependabot.com)
 
 Simple Functions for a Sane Environment
