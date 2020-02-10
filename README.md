@@ -61,4 +61,7 @@ Test are written using `ava`. You can run the test suite using `yarn test`.
 
 # Releasing
 
-While we use yarn for everything internally, `release-it` works more consistently with `npm run-script release`. This is because of how npm/yarn manage their logins.
+1. `yarn release --dry-run` to make sure you're happy with the changeset
+2. `yarn release` will generate your changelog and tags for you to push
+3. `git push` your tag to github
+4. `npm publish` your changes
