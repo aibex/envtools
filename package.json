@@ -35,58 +35,6 @@
     "husky:precommit": "concurrently \"npm:format:*\" && yarn build && git add -A && CI=1 ava",
     "commit:cz": "exec < /dev/tty && git-cz --hook || true"
   },
-  "release": {
-    "ci": false,
-    "plugins": [
-      [
-        "@semantic-release/commit-analyzer",
-        {
-          "releaseRules": [
-            {
-              "type": "feature",
-              "release": "minor"
-            },
-            {
-              "type": "fix",
-              "release": "patch"
-            },
-            {
-              "type": "refactor",
-              "release": "patch"
-            },
-            {
-              "type": "style",
-              "release": "patch"
-            }
-          ]
-        }
-      ],
-      "@semantic-release/github",
-      "@semantic-release/npm",
-      "@semantic-release/release-notes-generator"
-    ]
-  },
-  "standard-version": {
-    "releaseCommitMessageFormat": "❓ Chore: Release {{currentTag}}",
-    "types": [
-      {
-        "type": "✨ Feat",
-        "section": "Features"
-      },
-      {
-        "type": ":sparkles: Feat",
-        "section": "Features"
-      },
-      {
-        "type": "🐛 Fix",
-        "section": "Bug Fixes"
-      },
-      {
-        "type": ":bug: Fix",
-        "section": "Bug Fixes"
-      }
-    ]
-  },
   "husky": {
     "hooks": {
       "pre-commit": "yarn run husky:precommit",
