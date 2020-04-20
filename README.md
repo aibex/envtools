@@ -57,11 +57,11 @@ _ensure a set of environment variables are defined, supplying a default value of
 
 # Tests
 
-Test are written using `ava`. You can run the test suite using `yarn test`.
+Test are written using `ava`. You can run the test suite using `npm run test`.
 
 # Releasing
 
-1. `yarn release --dry-run` to make sure you're happy with the changeset
-2. `yarn release` will generate your changelog and tags for you to push
+1. `npm run release -- --dry-run` to make sure you're happy with the changeset
+2. `npm run release` will generate your changelog and tags for you to push
 3. `git push` your tag to github
 4. `npm publish` your changes

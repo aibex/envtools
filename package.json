@@ -3,7 +3,8 @@
   "version": "0.0.6",
   "description": "Simple Functions for a Sane Environment",
   "homepage": "https://github.com/aibexhq/envtools",
-  "author": "Aibex <oss@aibex0corp.com>",
+  "repository": "https://github.com/aibexhq/envtools",
+  "author": "Aibex <oss@aibex.com>",
   "license": "Apache-2.0",
   "engines": {
     "node": ">=10.18.0 <11 || >=12.14.0 <13 || >=13.5.0"
@@ -25,20 +26,20 @@
   ],
   "scripts": {
     "build": "rm -rf cjs/* && babel esm --out-dir cjs",
-    "bt": "yarn build && yarn test",
-    "watch": "nodemon -L --ignore cjs/ --exec yarn bt",
-    "test": "yarn build && ava",
-    "ci": "pretty-quick --check && yarn build && ava",
+    "bt": "npm run build && npm run test",
+    "watch": "nodemon -L --ignore cjs/ --exec npm run bt",
+    "test": "npm run build && ava",
+    "ci": "pretty-quick --check && npm run build && ava",
     "release": "semantic-release",
     "____________________": "echo \"The following sub-commands are used to serve the main commands above\"",
     "format:prettier": "pretty-quick --staged",
-    "husky:precommit": "concurrently \"npm:format:*\" && yarn build && git add -A && CI=1 ava",
+    "husky:precommit": "concurrently \"npm:format:*\" && npm run build && git add -A && CI=1 ava",
     "commit:cz": "exec < /dev/tty && git-cz --hook || true"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn run husky:precommit",
-      "prepare-commit-msg": "if [ -t 1 ] ; then yarn run commit:cz; fi"
+      "pre-commit": "npm run husky:precommit",
+      "prepare-commit-msg": "if [ -t 1 ] ; then npm run commit:cz; fi"
     }
   },
   "licenses": [
